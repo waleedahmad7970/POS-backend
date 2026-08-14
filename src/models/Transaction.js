@@ -59,6 +59,10 @@ const transactionSchema = new mongoose.Schema({
   timestamp: {
     type: Date,
     default: Date.now
+  },
+  tillSessionId: {
+    type: String,
+    default: null
   }
 }, { timestamps: true });
 

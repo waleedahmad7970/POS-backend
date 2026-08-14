@@ -12,6 +12,7 @@ const transactionRoutes = require('./routes/transactionRoutes');
 const userRoutes = require('./routes/userRoutes');
 const customerRoutes = require('./routes/customerRoutes');
 const attendanceRoutes = require('./routes/attendanceRoutes');
+const tillSessionRoutes = require('./routes/tillSessionRoutes');
 
 // Connect to database
 connectDB();
@@ -40,6 +41,7 @@ app.use('/api/transactions', transactionRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/customers', customerRoutes);
 app.use('/api/attendance', attendanceRoutes);
+app.use('/api/till-sessions', tillSessionRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
